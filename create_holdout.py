@@ -15,7 +15,7 @@ train.loc[mult_by_10_index, 'Yield'] = outliers.Yield / 10
 
 # sample random ids and create holdout set
 np.random.seed(123)
-rand_idx = np.random.choice(train.index, size = int(len(train) * 0.15), replace=False)
+rand_idx = np.random.choice(train.index, size = int(len(train) * 0.20), replace=False)
 
 train_holdout = train.loc[rand_idx]
 train_new = train.drop(rand_idx)
